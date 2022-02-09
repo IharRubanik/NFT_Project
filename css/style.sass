@@ -1,0 +1,3193 @@
+@font-face
+    font-family: 'AGPB'
+    src: url('../fonts/AkzidenzGroteskPro-BoldEx.woff2') format('woff2'), url('../fonts/AkzidenzGroteskPro-BoldEx.woff') format('woff'), url('../fonts/AkzidenzGroteskPro-BoldEx.ttf') format('truetype')
+    font-weight: 700
+    font-style: normal
+
+@font-face
+    font-family: 'Barlow-Regular'
+    src: url('../fonts/Barlow-Regular.eot?-kwf309')
+    src: url('../fonts/Barlow-Regular.eot?#iefix-kwf309') format('embedded-opentype'), url('../fonts/Barlow-Regular.woff?-kwf309') format('woff'), url('../fonts/Barlow-Regular.ttf?-kwf309') format('truetype'), url('../fonts/Barlow-Regular.svg?-kwf309#AA-Barlow-Regular') format('svg')
+    font-weight: normal
+    font-style: normal  
+
+@font-face
+    font-family: 'Barlow-Light'
+    src: url('../fonts/Barlow-Light.eot?-kwf309')
+    src: url('../fonts/Barlow-Light.eot?#iefix-kwf309') format('embedded-opentype'), url('../fonts/Barlow-Light.woff?-kwf309') format('woff'), url('../fonts/Barlow-Light.ttf?-kwf309') format('truetype'), url('../fonts/Barlow-Light.svg?-kwf309#AA-Barlow-Light') format('svg')
+    font-weight: normal
+    font-style: normal  
+
+@font-face
+    font-family: 'Barlow-Medium'
+    src: url('../fonts/Barlow-Medium.eot?-kwf309')
+    src: url('../fonts/Barlow-Medium.eot?#iefix-kwf309') format('embedded-opentype'), url('../fonts/Barlow-Medium.woff?-kwf309') format('woff'), url('../fonts/Barlow-Medium.ttf?-kwf309') format('truetype'), url('../fonts/Barlow-Medium.svg?-kwf309#AA-Barlow-Medium') format('svg')
+    font-weight: normal
+    font-style: normal  
+
+@font-face
+    font-family: 'AGPR'
+    src: url('../fonts/AkzidenzGroteskPro-Regular.eot?-kwf309')
+    src: url('../fonts/AkzidenzGroteskPro-Regular.eot?#iefix-kwf309') format('embedded-opentype'), url('../fonts/AkzidenzGroteskPro-Regular.woff?-kwf309') format('woff'), url('../fonts/AkzidenzGroteskPro-Regular.ttf?-kwf309') format('truetype'), url('../fonts/AkzidenzGroteskPro-Regular.svg?-kwf309#AA-AkzidenzGroteskPro-Regular') format('svg')
+    font-weight: normal
+    font-style: normal 
+
+@font-face
+    font-family: 'AGPM'
+    src: url('AkzidenzGroteskPro-MdEx.eot')
+    src: url('../fonts/AkzidenzGroteskPro-MdEx.eot?#iefix') format('embedded-opentype'), url('../fonts/AkzidenzGroteskPro-MdEx.woff2') format('woff2'), url('../fonts/AkzidenzGroteskPro-MdEx.woff') format('woff'), url('../fonts/AkzidenzGroteskPro-MdEx.ttf') format('truetype')
+    font-weight: 500
+    font-style: normal
+ 
+@font-face
+    font-family: 'PF Din Display Pro'
+    src: local('PF Din Display Pro Light'), local('PF-Din-Display-Pro-Light'), url('../fonts/PFDinDisplayPro-Light.woff2') format('woff2'), url('../fonts/PFDinDisplayPro-Light.woff') format('woff'), url('../fonts/PFDinDisplayPro-Light.ttf') format('truetype')
+    font-weight: 300
+    font-style: normal
+
+@font-face
+    font-family: 'PF Din Display Pro'
+    src: local('PF Din Display Pro Regular'), local('PF-Din-Display-Pro-Regular'), url('../fonts/PFDinDisplayPro-Regular.woff2') format('woff2'), url('../fonts/PFDinDisplayPro-Regular.woff') format('woff'), url('../fonts/PFDinDisplayPro-Regular.ttf') format('truetype')
+    font-weight: 400
+    font-style: normal
+
+@mixin t-circle-1
+    width: 24px
+    height: 24px
+    border: 1px solid transparent
+    background-color: #3A3A3A
+
+@mixin t-circle-2
+    width: 12px
+    height: 12px
+    border: 1px solid #CB24FF
+    background-color: transparent
+
+@mixin t-circle-3
+    width: 24px
+    height: 24px
+    border: 1px solid #CB24FF
+    background-color: transparent
+
+@mixin t-circle-4
+    width: 12px
+    height: 12px
+    border: 1px solid transparent
+    background-color: #3A3A3A
+
+
+
+
+:root
+    --keyPosition: translate(20vw, 100%)
+    --featOffset: 240px
+
+@keyframes opacity
+    0%
+        opacity: 1
+    100%
+        opacity: 0
+        
+@keyframes planet
+    0%
+        transform: var(--keyPosition) scale(0)
+    60%
+        transform: translate(-150%, -100%)
+    100%
+        transform: translate(0, 0) scale(1)
+
+@keyframes main-button-1
+    0%
+        top: -41px
+        left: -64px
+    33%
+        top: 36px
+        left: 36px
+    66%
+        top: -39px
+        left: -80px
+    100%
+        top: -41px
+        left: -64px
+
+@keyframes main-button-2
+    0%
+        top: 30px
+        left: -17px
+    33%
+        top: 11px
+        left: 68px
+    66%
+        top: 61px
+        left: 34px
+    100%
+        top: 30px
+        left: -17px
+
+        
+@keyframes white-triangle
+    0%
+        transform: translateY(0px)
+    33%
+        transform: translateY(30px)
+    66%
+        transform: translateY(0px)
+    100%
+        transform: translateY(-30px)
+        
+@keyframes blue-triangle
+    0%
+        transform: translateX(0px)
+    33%
+        transform: translateX(50px)
+    66%
+        transform: translateX(0px)
+    100%
+        transform: translateX(-50px)
+
+@keyframes purple-triangle
+    0%
+        transform: translate(0, 0)
+    25%
+        transform: translate(0, -75px)
+    50%
+        transform: translate(-35px, -75px)
+    100%
+        transform: translate(0, 0)
+        
+@keyframes main-smoke
+    0%
+        transform: scale(1)
+    100%
+        transform: scale(1.3)
+
+@keyframes nft-gradient-text
+    0%
+        background-position: -640px
+    100%
+        background-position: 640px
+        
+@keyframes rotate-1
+    0%
+        transform: translate(-50%, -50%) rotateZ(0deg)
+    100%
+        transform: translate(-50%, -50%) rotateZ(360deg)
+           
+@keyframes rotate-2
+    0%
+        transform: translate(-50%, -50%) rotateZ(0deg)
+    100%
+        transform: translate(-50%, -50%) rotateZ(-360deg)
+
+@keyframes tokenomics-1
+    0%
+        @include t-circle-1
+    10%
+        @include t-circle-1
+    15%   
+        @include t-circle-2
+    25%   
+        @include t-circle-2
+    30%   
+        @include t-circle-3
+    50%
+        @include t-circle-3
+    55%
+        @include t-circle-4
+    65%
+        @include t-circle-4
+    70%
+        @include t-circle-1
+    85%
+        @include t-circle-1
+    90%
+        @include t-circle-2
+    100%
+        @include t-circle-2
+
+@keyframes tokenomics-2
+    0%
+        @include t-circle-2
+    10%
+        @include t-circle-2
+    15% 
+        @include t-circle-3
+    30%   
+        @include t-circle-3
+    35%
+        @include t-circle-4
+    50%
+        @include t-circle-4
+    55%
+        @include t-circle-1
+    65%
+        @include t-circle-1
+    70%
+        @include t-circle-2
+    80%
+        @include t-circle-2
+    85%
+        @include t-circle-3
+    100%
+        @include t-circle-3
+
+@keyframes tokenomics-3
+    0%
+        justify-content: flex-start
+    10%
+        justify-content: flex-start
+    15%   
+        justify-content: flex-end
+    25%   
+        justify-content: flex-end
+    30%   
+        justify-content: flex-start
+    50%
+        justify-content: flex-start
+    55%
+        justify-content: flex-end
+    65%
+        justify-content: flex-end
+    70%
+        justify-content: flex-start
+    85%
+        justify-content: flex-start
+    90%
+        justify-content: flex-end
+    100%
+        justify-content: flex-end
+        
+@keyframes tokenomics-4
+    0%
+        justify-content: flex-end
+    10%
+        justify-content: flex-end
+    15% 
+        justify-content: flex-start
+    30%   
+        justify-content: flex-start
+    35%
+        justify-content: flex-end
+    50%
+        justify-content: flex-end
+    55%
+        justify-content: flex-start
+    65%
+        justify-content: flex-start
+    70%
+        justify-content: flex-end
+    80%
+        justify-content: flex-end
+    85%
+        justify-content: flex-start
+    100%
+        justify-content: flex-start
+
+@keyframes main-head
+    0%
+        opacity: 0
+    100%
+        opacity: 1        
+
+
+*
+    box-sizing: border-box
+
+body
+    margin: 0
+    padding: 0
+    background: #000 url(../img/bg-site.png) 0 0
+    font-family: sans-serif
+    width: 100%
+    overflow-x: hidden
+    &.hidd
+        overflow: hidden
+
+.container
+    max-width: 1550px
+    width: 100%
+    padding: 0 40px 0 110px
+    margin: 0 auto
+
+.section-title
+    position: relative
+    z-index: 2
+    font-size: 52px
+    margin: 0
+    text-transform: uppercase
+    font-family: 'AGPB', sans-serif
+
+ul, ol
+    padding: 0
+    list-style: none
+
+.header
+    &-inner
+        z-index: 99
+        top: 0
+        left: 0
+        background: #000 url("../img/bg-site.png")
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        width: 70px
+        height: 100vh
+        position: fixed
+        color: #fff
+        &__name
+            width: 412px
+            display: none
+            justify-content: space-between
+            align-items: flex-end
+            color: #fff
+            strong
+                font-weight: 500
+                font-family: 'AGPM', sans-serif
+                font-size: 22px
+                &.active
+                    color: #000
+                    transition: .2s ease-in
+            span
+                font-family: 'Barlow-Regular', sans-serif
+                font-size: 16px
+                color: #616161
+                display: inline-block
+                margin-bottom: 3px
+    &-logo
+        width: 70px
+        height: 70px
+        display: flex
+        align-items: center
+        justify-content: center
+        overflow: hidden
+        background-color: #0342E7
+        position: relative
+        cursor: pointer
+        img
+            position: relative
+            z-index: 2
+        &:before
+            content: url('../img/menu/logo-bg-gradient.svg')
+            position: absolute
+            top: -50px
+            left: -70px
+        &:after
+            content: ''
+            width: 100%
+            height: 100%
+            position: absolute
+            display: inline-block
+            left: 0
+            top: 0
+            background:  url("../img/logo-bg.png")
+            z-index: 1
+    &-name
+        width: 412px
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+        top: 31px
+        left: 92px
+        color: #fff
+        position: absolute
+        z-index: 100
+        strong
+            font-weight: 500
+            font-family: 'AGPM', sans-serif
+            font-size: 22px
+            transition: color .2s ease-in
+        &.active
+            position: fixed
+            strong
+                color: #000
+        span
+            font-family: 'Barlow-Regular', sans-serif
+            font-size: 16px
+            color: #616161
+            display: inline-block
+            margin-bottom: 3px
+    &-button
+        flex-grow: 1
+        background: 0
+        border: 1px solid #3A3A3A
+        border-left: 0
+        border-top: 0
+        display: flex
+        justify-content: center
+        align-items: center
+        cursor: pointer
+        transition: .2s ease-in
+        gap: 6px
+        overflow: hidden
+        position: relative
+        &:after
+            content: ''
+            display: inline-block
+            transform: translateX(100%)
+            height: 100%
+            width: 0%
+            background-color: #fff
+            background: #0342E7
+            left: 0
+            top: 0
+            transition: width 0s linear .3s, transform .3s ease-out
+            position: absolute
+            z-index: -1
+        &:hover
+            border-color: #0342E7
+            gap: 4px
+            &:after
+                transition: width 0s linear, transform .3s ease-out
+                width: 100%
+                transform: translateX(0)
+        &.active
+            border-right-color: #0342E7
+            border-bottom-color: #0342E7
+            &:after
+                width: 100%
+                transform: translateX(0)
+            span
+                transition: transform .15s ease-in-out
+                margin: 0
+                position: absolute
+                height: 30px
+            span:first-child
+                transform: rotateZ(-45deg)
+            span:last-child
+                transform: rotateZ(45deg)
+        span
+            transition: transform .15s ease-in-out
+            transform-origin: center
+            width: 2px
+            height: 40px
+            display: block
+            background-color: #fff
+    &-list
+        margin: 0
+        padding: 30px 0
+        text-align: center
+        border-right: 1px solid #3A3A3A
+        display: flex
+        flex-direction: column
+        gap: 30px
+    &-content
+        position: fixed
+        z-index: 98
+        height: 100vh
+        overflow-y: auto
+        transform: translateX(-150%)
+        transition: 1s ease-out
+        width: 100vw
+        left: 0
+        top: 0
+        background-color: #fff
+        padding-left: 70px
+        overflow: auto
+        &.active
+            transform: translate(0)
+        &__wrapper
+            height: 100%
+            display: flex
+            align-items: center
+            position: relative
+            min-height: 970px
+            padding: 70px 40px 236px
+        &__inner
+            display: flex
+            justify-content: space-between
+            align-items: flex-start
+            padding: 0
+        &__nav
+            margin-top: 44px
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            counter-reset: section
+            gap: 40px
+            flex-grow: 1
+            max-width: 380px
+            a
+                transition: .3s ease-out
+                color: #000
+                text-decoration: none
+                display: inline-flex
+                align-items: flex-start
+                width: 100%
+                font-size: 42px
+                font-family: 'Barlow-Regular', sans-serif
+                position: relative
+                padding-left: 41px
+                &:before
+                    position: absolute
+                    padding-top: 10px
+                    padding-bottom: 4px
+                    display: inline-block
+                    width: 41px
+                    font-size: 16px
+                    font-family: 'PF Din Display Pro', sans-serif
+                    font-weight: 300
+                    content: '0' counter(section) 
+                    counter-increment: section
+                    transition: .3s ease-out
+                    top: 0
+                    left: 0
+                    transform: translateY(0%)
+                &:hover
+                    font-family: 'Barlow-Medium', sans-serif
+                    color: #0342E7
+                    &:before
+                        top: 100%
+                        transform: translateY(-100%)
+                        color: #0342E7
+                        font-family: 'PF Din Display Pro', sans-serif
+                        font-weight: 400
+    &-contact
+        flex-grow: 1
+        max-width: 825px
+        display: flex
+        justify-content: space-between
+        &__item
+            padding: 52px 0 24px 60px
+            position: relative
+            max-width: 341px
+            display: flex
+            flex-direction: column
+            &:before
+                content: ''
+                position: absolute
+                width: 60px
+                height: 60px
+                border-top: 1px solid #000
+                border-left: 1px solid #000
+                left: 0
+                top: 0
+            strong
+                font-family: 'AGPB', sans-serif
+                font-size: 30px
+                line-height: 40px
+                text-transform: uppercase
+            p
+                font-family: 'Barlow-Regular', sans-serif
+                font-size: 20px
+                line-height: 30px
+                margin: 20px 0 12px
+            a
+                margin-top: auto
+                display: inline-block
+                padding-left: 36px
+                color: #CB24FF
+                font-family: 'Barlow-Medium', sans-serif
+                font-size: 20px
+                text-decoration: none
+                background: url('../img/menu/letter.svg') left center no-repeat
+                span
+                    line-height: 30px
+                    padding-bottom: 5px
+                    border-bottom: 1px solid rgba(203,36,255, .2)
+                    transition: .2s ease-in
+                &:hover span
+                    border-bottom: 1px solid #CB24FF
+    &-subscribe
+        position: absolute
+        right: 40px
+        bottom: 0
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+        &__plane
+            position: absolute
+            left: -34px
+            transform: translateX(-100%)
+        &__block
+            width: 440px
+            padding: 36px 40px 45px 40px
+            color: #fff
+            display: flex
+            flex-direction: column
+            background: url('../img/bg-site.png') 440px 310px, radial-gradient(60.45% 76.17% at -5.8% 40.18%, #16A9FE 0%, rgba(22, 169, 254, 0) 100%), radial-gradient(101.15% 101.15% at 50% 101.15%, #0342E7 0%, #CB24FF 53.65%)
+            strong
+                font-family: 'AGPM', sans-serif
+                font-size: 32px
+                font-weight: 500
+                text-transform: uppercase
+            b
+                font-family: 'AGPM', sans-serif
+                font-size: 22px
+                font-weight: 500
+                text-transform: uppercase
+            p
+                margin: 20px 0 30px
+                font-family: 'Barlow-Regular', sans-serif
+                font-size: 20px
+                line-height: 30px
+            form
+                display: flex
+                justify-content: space-between
+            input
+                font-size: 18px
+                font-family: 'Barlow-Medium', sans-serif
+                font-weight: 500
+                color: #fff
+                background: 0
+                border: 0
+                border-bottom: 1px solid #fff
+                padding: 0 11px
+                flex-grow: 1
+                max-width: 290px
+                &::placeholder
+                    color: rgba(255, 255, 255, .4)
+                &:focus
+                    outline: none
+                    border-bottom-color: orange
+            button
+                border: 0
+                width: 50px
+                height: 50px
+                display: inline-flex
+                justify-content: center
+                align-items: center
+                transition: transform .15s linear
+                &:hover
+                    transform: scale(1.05)
+
+.main
+    padding: 257px 0 90px
+    width: 100%
+    position: relative
+    &-back
+        position: absolute
+        top: 0
+        left: 0
+        width: 100vw
+        height: 1200px
+        overflow-x: hidden
+        z-index: -1
+        &.active &__head
+            transform: translateX(0)
+            transition: transform 1.2s ease-in 3.9s
+            img:last-child
+                animation: main-head 4s linear 5.1s infinite alternate
+        &.active &__triangle img
+            transform: scale(1)
+        &.active .white-triangle > img
+            opacity: 1
+            transition: opacity 0s linear 3.9s, transform 1.2s linear 3.9s
+            animation: white-triangle 8s linear 5.1s infinite alternate
+        &.active .blue-triangle > img
+            opacity: 1
+            transition: opacity 0s linear 2.7s, transform 1.2s linear 2.7s
+            animation: blue-triangle 8s linear 5.1s infinite alternate
+        &.active .purple-triangle > img
+            opacity: 1
+            transition: opacity 0s linear 1.5s, transform 1.2s ease-out 1.5s
+            animation: purple-triangle 8s linear 5.1s infinite
+        &.active .blue-triangle:before
+            opacity: 1
+            transition: opacity 1.2s linear 2.7s
+        &.active .purple-triangle:before
+            transform: scale(1)
+            transition: transform 1.2s ease-out 1.5s
+        &.active &__block
+            opacity: 1
+            &:before
+                opacity: 1
+                transition: opacity 1.2s ease-out 1.5s
+        &__head
+            transform: translateX(100%)
+            right: -68px
+            top: 218px
+            position: absolute
+            max-width: 555px
+            width: 100%
+            img
+                width: 100%
+                position: absolute
+                top: 0
+                opacity: 1
+                &:last-child
+                    opacity: 0
+            &.active img
+                transition: opacity .2s linear
+        &__block
+            transition: opacity .4s ease-in .2s
+            opacity: 0
+            position: absolute
+            right: -131px
+            top: -296px
+            display: flex
+            justify-content: center
+            align-items: center
+            &:before
+                content: url("../img/main/anim-bg.png")
+                position: absolute
+                left: -600px
+                top: 290px
+                opacity: 0
+        &__triangle
+            position: absolute
+            display: flex
+            justify-content: center
+            align-items: center
+            &.white-triangle
+                position: relative
+                img
+                    opacity: 0
+                & > img
+                    transform: scale(.53) translateY(0px)
+            .blue-triangle > img
+                transform: scale(.73)
+            .purple-triangle > img
+                transform: scale(.63)
+            &.blue-triangle:before
+                content: url('../img/main/smoke.svg')
+                position: absolute
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 1147px
+                height: 1063px
+                top: -150px
+                left: -240px
+                opacity: 0
+                animation: main-smoke 10s linear .3s infinite alternate
+            &.purple-triangle:before
+                transform: scale(0)
+                content: url('../img/main/purple-triangle-bg.svg')
+                width: 249px
+                height: 486px
+                position: absolute
+                display: flex
+                justify-content: center
+                align-items: center
+                top: -226px
+    &-info
+        position: relative
+        z-index: 2
+        color: #fff
+        display: flex
+        flex-direction: column
+        align-items: stretch
+        max-width: 690px
+        &__text
+            margin-bottom: 70px
+            display: flex
+            flex-direction: column
+            text-transform: uppercase
+            align-items: flex-start
+            span
+                font-family: 'AGPM', sans-serif
+                font-size: 38px
+                display: inline-block
+                position: relative
+                &:before
+                    content: ''
+                    display: inline-block
+                    width: 60px
+                    height: 60px
+                    position: absolute
+                    border: 1px solid #fff
+                &.main-first-span:before
+                    border-left: 0
+                    border-bottom: 0
+                    left: 100%
+                    top: -48px
+                &.main-second-span
+                    margin-left: 156px
+                    &:before
+                        border-top: 0
+                        border-right: 0
+                        left: -101px
+                        bottom: 9px
+            strong
+                font-family: 'AGPB', sans-serif
+                font-size: 90px
+                font-weight: 700
+            b
+                font-weight: 500
+                font-size: 55px
+                font-family: 'AGPM', sans-serif
+                margin-bottom: 26px
+                display: inline-block
+                background: radial-gradient(60.45% 76.17% at -5.8% 40.18%, #16A9FE 0%, rgba(22, 169, 254, 0) 100%), radial-gradient(101.15% 101.15% at 50% 101.15%, #0342E7 0%, #CB24FF 53.65%) #fff
+                background-repeat: no-repeat
+                background-position: -640px
+                animation: nft-gradient-text 10s ease-in 4s infinite
+                -webkit-background-clip: text
+                -webkit-text-fill-color: transparent
+        &__bottom
+            display: flex
+            justify-content: space-between
+            p
+                margin: 0
+                line-height: 34px
+                font-size: 24px
+                font-family: 'Barlow-Light', sans-serif
+                max-width: 280px
+            button
+                background-color: #0342E7
+                font-family: 'AGPB', sans-serif
+                font-size: 16px
+                width: 200px
+                height: 200px
+                position: relative
+                border: 0
+                border-radius: 50%
+                overflow: hidden
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                cursor: pointer
+                transition: transform .3s ease-out
+                &:before, &:after
+                    position: absolute
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    border-radius: 50%
+                    opacity: 1
+                    transition: opacity .3s ease-out
+                &:before
+                    content: url('../img/main/btn-bg-1.svg')
+                    width: 311px
+                    height: 191px
+                    left: -64px
+                    top: -41px
+                    animation: main-button-1 4s linear infinite
+                &:after
+                    content: url('../img/main/btn-bg-2.svg')
+                    width: 139px
+                    height: 139px
+                    top: 30px
+                    left: -17px
+                    animation: main-button-2 4s linear infinite
+                &:hover
+                    transform: scale(.91)
+                    &:before
+                        animation-play-state: pause
+                        opacity: 0
+                    &:after
+                        animation-play-state: pause
+                        opacity: 0
+                span
+                    position: relative
+                    z-index: 1
+                    color: #fff
+                    font-size: 16px
+                    text-transform: uppercase
+                    font-family: 'AGPB', sans-serif
+                img
+                    position: absolute
+                    bottom: 38px
+                    z-index: 1
+            
+
+.about
+    padding: 160px 0 218px
+    color: #fff
+    max-height: 970px
+    display: flex
+    align-items: flex-start
+    overflow: hidden
+    &-inner
+        position: relative
+    hr
+        border: 1px solid #fff
+        margin-top: 0
+        margin-bottom: 49px
+    &-text
+        font-size: 46px
+        font-family: 'Barlow-Medium', sans-serif
+        max-width: 920px
+        margin: 0
+        span
+            background: radial-gradient(60.45% 76.17% at -5.8% 40.18%, #16A9FE 0%, rgba(22, 169, 254, 0) 100%), radial-gradient(101.15% 101.15% at 50% 101.15%, #0342E7 0%, #CB24FF 53.65%)
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+    &-blocktext
+        font-family: 'Barlow-Light', sans-serif
+        font-size: 24px
+        line-height: 34px
+        position: relative
+        max-width: 405px
+        margin: 153px 0 0 240px
+        &:before, &:after
+            content: ''
+            border: 1px solid #fff
+            width: 60px
+            height: 60px
+            position: absolute
+        &:before
+            top: -51px
+            left: 100%
+            border-left: 0
+            border-bottom: 0
+        &:after
+            right: 100%
+            top: 100%
+            border-top: 0
+            border-right: 0
+    &-circle
+        position: absolute
+        z-index: -1
+        top: 373px
+        right: 184px
+        max-width: 233px
+        width: 100%
+        img
+            width: 100%
+        &:before, &:after
+            position: absolute
+            display: flex
+            justify-content: center
+            align-items: center
+            left: 50%
+            top: 50%
+        &:before
+            width: 450px
+            height: 450px
+            animation: rotate-1 10s linear infinite
+            content: url('../img/about/gradient-circle.svg')
+        &:after
+            width: 521px
+            height: 521px
+            animation: rotate-2 15s linear infinite
+            content: url('../img/about/text-circle.svg')
+
+.process
+    &-parent
+        height: 6000px
+        position: relative
+        &__sticky
+            padding: 160px 0 150px
+            position: sticky
+            top: 0
+            color: #fff
+        &__flex
+            margin-top: 65px
+            display: flex
+            align-items: flex-end
+        &__pre
+            display: inline-block
+            vertical-align: bottom
+            padding: 45px 0
+            width: 60px
+            position: relative
+            hr
+                border: 1px solid #fff
+                margin: 0
+            span
+                font-family: 'AGPM', sans-serif
+                font-size: 16px
+                text-transform: uppercase
+                position: absolute
+                top: 0
+                left: 0
+        &__grid
+            vertical-align: bottom
+            margin-top: 85px
+            display: inline-flex
+            text-align: center
+            position: relative
+        &__item
+            min-height: 550px
+            display: flex
+            flex-direction: column
+            opacity: 0
+            visibility: hidden
+            margin-left: -160px
+            transition: .2s ease-in
+            &.view
+                visibility: visible
+                margin-left: 0
+                opacity: 1
+            &.active span
+                color: #CB24FF
+            &.active .process-item__info
+                visibility: visible
+                opacity: 1
+            &:not(.active) button:hover img:nth-child(1)
+                opacity: 0
+            &:not(.active) button:hover img:nth-child(2)
+                opacity: 1
+            &:not(.active) button:hover img:nth-child(1)
+                opacity: 1
+            &.active button img:nth-child(1)
+                opacity: 0
+            &.active button img:nth-child(2)
+                opacity: 0
+            &.active button img:nth-child(3)
+                opacity: 1
+            &.active .process-item__bottom:before
+                background-image: url("../img/process/line-active.svg")
+        &__grid-mobile
+            display: none
+            position: relative
+            padding-top: 133px
+            overflow-x: hidden
+            .process-parent__slider
+                margin-bottom: 0
+            .process-slider__item
+                display: flex
+                min-height: 456px
+                position: relative
+                max-width: 600px
+                &:last-child
+                    background: url('../img/process/arrow.svg') right calc(100% - 39px) no-repeat
+                    hr
+                        width: calc(100% - 4px)
+                hr
+                    border: 0
+                    width: 100%
+                    height: 2px
+                    background-color: #fff
+                    position: absolute
+                    bottom: 50px
+                    margin: 0
+            .process-item__before
+                font-family: 'AGPM', sans-serif
+                font-size: 12px
+                height: 100px
+                width: 80px
+                align-self: flex-end
+                text-transform: uppercase
+            .process-item__block
+                display: flex
+                flex-direction: column
+                align-items: center
+                button
+                    background: url() center center no-repeat
+                    display: inline-block
+                    width: 130px
+                    height: 130px
+                    border: 0
+                    padding: 0
+                    cursor: pointer
+                    transform: translateY(-15px)
+                    margin: auto 15px
+                    &.button-1
+                        margin-top: 3px
+                    &.button-2
+                        margin-bottom: 30px
+                    &.button-6
+                        margin-top: 4px
+                    img
+                        position: absolute
+                        top: 50%
+                        left: 50%
+                        transform: translate(-50%, -50%)
+                .process-block__bottom
+                    height: 100px
+                    position: relative
+                    z-index: 1
+                    span
+                        font-family: 'AGPM', sans-serif
+                        font-size: 14px
+                        position: absolute
+                        left: 50%
+                        transform: translateX(calc(-50% - 30px))
+                        color: #CB24FF
+                    &:before
+                        content: ''
+                        background: #000 url("../img/process/line-active.svg") center center no-repeat
+                        display: block
+                        position: absolute
+                        top: 0
+                        left: 50%
+                        transform: translateX(-50%)
+                        width: 11px
+                        height: 100%
+
+            .process-item__info
+                position: relative
+                opacity: 1
+                visibility: visible
+                padding-bottom: 50px
+                margin-bottom: auto
+                right: auto
+                transform: none
+                &:before
+                    content: ''
+                    border: 1px solid transparent
+                    border-top-color: #fff
+                    border-right-color: #fff
+                    display: inline-block
+                    position: absolute
+                    right: 0
+                    top: 0
+                    transform: translateY(-100%)
+            .hr
+                width: 100%
+                height: 2px
+                background-color: #fff
+                position: absolute
+                bottom: 50px
+                &:before
+                    content: url('../img/process/arrow.svg')
+                    position: absolute
+                    right: -4px
+                    top: 50%
+                    transform: translateY(-43%)
+    &-item__info
+        transition: .2s ease-in
+        opacity: 0
+        visibility: hidden
+        text-align: left
+        position: absolute
+        top: 0
+        right: 0
+        width: 376px
+        height: 100%
+        transform: translateX(100%)
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        &::before
+            content: ''
+            display: inline-block
+            position: absolute
+            width: 60px
+            height: 60px
+            border: 1px solid transparent
+            border-right-color: #fff
+            border-top-color: #fff
+            top: 0
+            right: 0
+            transform: translateY(-100%)
+        h3
+            font-family: 'AGPB', sans-serif
+            line-height: 34px
+            margin-bottom: 15px
+            font-size: 24px
+            text-transform: uppercase
+            margin: 0
+        p
+            font-family: 'Barlow-Light'
+            line-height: 30px
+            margin: 15px 0 0
+            font-size: 20px
+            font-weight: 300
+        button
+            pointer-events: none
+            padding: 0
+            margin: auto 0 31px -1px
+            background: 0
+            border: 0
+            img
+                opacity: 1 !important
+            
+    &-item__button
+        background: url() center center no-repeat
+        display: inline-block
+        width: 130px
+        height: 130px
+        border: 0
+        padding: 0
+        cursor: pointer
+        transform: translateY(-15px)
+        margin: auto 15px
+        img
+            opacity: 0
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            &:nth-child(1)
+                opacity: 1
+        &.button-1
+            margin-top: 0
+        &.button-2
+            margin-bottom: 30px
+        &.button-6
+            margin-top: 0
+    &-item__bottom
+        position: relative
+        padding: 45px 0
+        &:before
+            content: ''
+            background: #000 url("../img/process/line.svg") center center no-repeat
+            display: block
+            position: absolute
+            top: 0
+            left: 50%
+            transform: translateX(-50%)
+            width: 11px
+            height: 100%
+        hr
+            border: 1px solid #fff
+            margin: 0
+        span
+            font-family: 'AGPM', sans-serif
+            font-size: 16px
+            position: absolute
+            top: 0
+            right: calc(50% + 11px + 5px)
+
+
+.features
+    padding: 160px 0 143px
+    color: #fff
+    .container
+        max-width: 1550px
+    &-inner
+        gap: 20px
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        margin-top: 86px
+    &-accordeon
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        align-items: flex-start
+        row-gap: 40px
+        counter-reset: features
+        max-width: 624px
+        &__item
+            max-width: 267px
+            width: 100%
+            border-bottom: 1px solid #3A3A3A
+            padding-bottom: 0
+            transition: border-bottom .2s ease-out, padding-bottom .2s ease-out
+            &:hover
+                border-bottom-color: #fff
+                padding-bottom: 16px
+                summary
+                    padding-bottom: 0
+                    color: #0342E7
+                    &:after
+                        color: #fff
+                p
+                    opacity: 1
+                    max-height: 100%
+            summary
+                font-family: 'AGPM', sans-serif
+                font-weight: 500
+                font-size: 18px
+                line-height: 34px
+                padding-bottom: 18px
+                color: #fff
+                list-style: none
+                text-transform: uppercase
+                transition: padding-bottom .2s ease-out, color .2s ease-out
+                &::-webkit-details-marker
+                    display: none
+                &:after
+                    transition: color .2s ease-out
+                    margin-left: 7px
+                    display: inline-block
+                    font-size: 12px
+                    font-family: 'AGPM', sans-serif
+                    font-weight: 500
+                    vertical-align: top
+                    color: #616161
+                    line-height: 20px
+                    content: '0' counter(features)
+                    counter-increment: features
+            p
+                font-family: 'Barlow-Light', sans-serif
+                font-size: 18px
+                line-height: 28px
+                opacity: 0
+                transition: .2s ease-out, max-height .2s ease-out
+                max-height: 0
+                margin: 0
+                overflow: hidden
+    &-scroller
+        position: relative
+        margin-top: -153px
+        max-width: 440px
+        margin-right: var(--featOffset)
+        background: radial-gradient(60.45% 76.17% at -5.8% 40.18%, #16A9FE 0%, rgba(22, 169, 254, 0) 100%), radial-gradient(101.15% 101.15% at 50% 101.15%, #0342E7 0%, #CB24FF 53.65%), url('')
+        &__images
+            position: relative
+            overflow: hidden
+            height: 100%
+            min-height: 665px
+            display: flex
+            align-items: flex-end
+            img
+                transform: translateX(150%)
+                opacity: 0
+                visibility: hidden
+                max-width: 548px
+                position: absolute
+                top: 0
+                left: 0
+                transition: .6s ease-out
+                &.active
+                    position: static
+                    opacity: 1
+                    visibility: visible
+                    transform: translateX(-108px)
+                &.prev-img
+                    position: static
+                    opacity: 1
+                    visibility: visible
+                    transform: translateX(-100%)
+                &.next-img
+                    position: static
+                    opacity: 1
+                    visibility: visible
+                    transform: translateX(200%)
+        &__info
+            position: absolute
+            z-index: 11
+            max-width: 361px
+            width: 100%
+            top: 0
+            right: 0
+            div
+                opacity: 0
+                visibility: hidden
+                padding-top: 74px
+                position: absolute
+                right: 0
+                top: 0
+                width: 100%
+                transform: translateX(var(--featOffset))
+                &:before
+                    content: ''
+                    width: 58px
+                    height: 58px
+                    display: inline-block
+                    border: 1px solid #fff
+                    border-left: 0
+                    border-bottom: 0
+                    position: absolute
+                    right: 0
+                    top: 0
+                &.active
+                    opacity: 1
+                    visibility: visible
+                    transition: transform .2s ease-in
+                h3
+                    font-family: 'AGPB', sans-serif
+                    font-size: 24px
+                    line-height: 34px
+                    margin: 0 0 15px 0
+                    text-transform: uppercase
+                p
+                    font-family: 'Barlow-Regular', sans-serif
+                    font-size: 20px
+                    line-height: 30px
+                    margin: 0   
+    &-slider
+        top: 0
+        left: 0
+        position: absolute
+        width: 100%
+        height: 100%
+        &__btns
+            position: absolute
+            right: calc(var(--featOffset) * -1)
+            display: flex
+            gap: 20px
+            bottom: 0
+        &__btn
+            bottom: 0
+            cursor: pointer
+            width: 54px
+            height: 54px
+            display: flex
+            justify-content: center
+            align-items: center
+            position: relative
+            border: 1px solid #fff
+            overflow: hidden
+            border-radius: 50%
+            transition: border .2s ease-out
+            &:after
+                content: ''
+                left: 0
+                top: 0
+                width: 100%
+                height: 100%
+                position: absolute
+                background: #0342E7
+                transition: transform .2s ease-out
+                border-radius: 50%
+            &:hover
+                border-color: #0342E7
+            img
+                position: relative
+                z-index: 1
+        &__pagination
+            position: absolute
+            bottom: -17px !important
+            display: flex
+            justify-content: space-between
+            gap: 7px
+            div
+                margin: 0 !important
+                border-radius: 0
+                display: block
+                width: 100%
+                height: 2px
+                background: #3A3A3A
+                opacity: 1
+                &.swiper-pagination-bullet-active
+                    background: radial-gradient(60.45% 76.17% at -5.8% 40.18%, #16A9FE 0%, rgba(22, 169, 254, 0) 100%), radial-gradient(101.15% 101.15% at 50% 101.15%, #0342E7 0%, #CB24FF 53.65%)
+
+        &__prev
+            img
+                transform: rotateZ(180deg)
+            &:after
+                transform: translateX(100%)
+            &:hover:after
+                transform: translateX(0%)
+        &__next
+            right: 0
+            &:after
+                transform: translateX(-100%)
+            &:hover:after
+                transform: translateX(0%)
+        &__item
+            overflow: hidden
+            position: relative
+            &:before
+                content: ''
+                position: absolute
+                z-index: 1
+                width: 100%
+                height: 100%
+                background: url('../img/features/slide-bg.png')
+            img
+                position: relative
+                left: -108px
+
+.vision
+    padding: 0 0 130px
+    height: 7000px
+    color: #fff
+    box-sizing: content-box
+    position: relative
+    &-slider
+        top: 0
+        left: 0
+        height: calc(100% + 278px)
+        width: 100%
+        display: none
+        position: absolute
+        z-index: 5
+        &__item
+            height: 100%
+    &-sticky
+        padding-bottom: 148px
+        padding-top: 160px
+        width: 100%
+        position: sticky
+        top: 0
+        background: url('../img/vision/shadow_gif.svg') right bottom no-repeat, url("../img/vision/black-hole.gif") right bottom no-repeat
+    &-main
+        position: relative
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+        &__face
+            margin-top: -169px
+            position: relative
+            display: inline-block
+            vertical-align: middle
+            max-width: 520px
+            img
+                width: 100%
+                transition: .5s ease-in
+                opacity: 0
+                visibility: hidden
+                &.active
+                    left: 0
+                    top: 0
+                    position: absolute
+                    opacity: 1
+                    visibility: visible
+        &__center
+            position: relative
+            max-width: 478px
+            display: inline-block
+            vertical-align: middle
+        &__planet
+            position: relative
+            width: 288px
+            img
+                transition: .8s ease-in
+                transform: var(--keyPosition) scale(0)
+                width: 100%
+                opacity: 0
+                position: absolute
+                left: 0
+                top: 0
+                &.active
+                    animation: planet .8s ease-in-out .6s
+                    position: static
+                    transition: .8s ease-in-out .6s
+                    transform: translate(0, 0) scale(1)
+                    opacity: 1
+        &__text
+            position: absolute
+            top: 170px
+            div
+                overflow: hidden
+                width: 477px
+                position: absolute
+                top: 0
+                opacity: 0
+                visibility: hidden
+                transition: opacity .1s ease-in .3s, visibility .1s ease-in .3s
+                &.active
+                    transition: opacity 1s ease-in .6s
+                    position: static
+                    opacity: 1
+                    visibility: visible
+                    h3
+                        transform: translateY(0)
+                    p
+                        transform: translateY(0)
+            h3
+                transform: translateY(-150%)
+                transition: transform .2s ease-in
+                font-family: 'AGPB', sans-serif
+                margin: 0
+                font-size: 24px
+                line-height: 34px
+                font-weight: 700
+                text-transform: uppercase
+                margin-left: 55px
+            p
+                transform: translateY(-200%)
+                transition: transform .5s ease-in .15s
+                font-family: 'Barlow-Light', sans-serif
+                margin: 30px 0 0 0
+                padding: 58px
+                font-size: 20px
+                line-height: 30px
+                position: relative
+                &:before, &:after
+                    content: ''
+                    position: absolute
+                    display: inline-block
+                    width: 58px
+                    height: 58px
+                    border: 1px solid transparent
+                &:before
+                    border-top-color: #fff
+                    border-right-color: #fff
+                    top: 0
+                    right: 0
+                &:after
+                    border-left-color: #fff
+                    border-bottom-color: #fff
+                    bottom: 0
+                    left: 0
+        &__triangle
+            width: 200px
+            height: 170px
+            position: relative
+            opacity: 0
+            transition: opacity .2s ease-in-out
+            align-self: flex-start
+            margin-right: 10px
+            .vision-triangle
+                width: 0%
+                height: 1px
+                background-color: #fff
+                transform-origin: left
+                position: relative
+                &:before
+                    opacity: 0
+                    content: url('../img/vision/arrow.svg')
+                    position: absolute
+                    display: inline-block
+                    top: 50%
+                    transform: translateY(-45%)
+                    left: 0%
+            &.active
+                opacity: 1
+                .vision-triangle
+                    width: 100%
+                    &-1
+                        transition: width .4s ease-in
+                        &:before
+                            transform: translateY(-30%) rotateZ(120deg)
+                            animation: opacity .02s linear .42s forwards
+                            transition: left .3s ease-in-out,opacity .1s ease-in, transform .05s linear .4s
+                    &-2
+                        transform: rotateZ(-60deg) rotateY(-180deg) translate(-100px, 172px)
+                        transition: width .4s ease-in .45s
+                        &:before
+                            transform: rotateZ(-120deg) translate(100% ,55%)
+                            animation: opacity .02s linear .87s forwards
+                            transition: left .3s ease-in-out .45s,opacity .1s ease-in .45s, transform .05s linear .85s
+                    &-3
+                        width: 93%
+                        transform: rotateY(180deg) rotateZ(-60deg) translate(-100px, -173px)
+                        transition: width .4s ease-in .85s
+                        &:before
+                            transition: left .2s ease-in .75s, opacity .1s ease-in .85s, transform .05s linear 1.3s, -webkit-transform .05s linear 1.3s
+                    &:before
+                        opacity: 1
+                        left: 93%
+                span
+                    transition: .3s ease-out
+                    opacity: 1
+            span
+                font-family: 'AGPR', sans-serif
+                color: #CB24FF
+                font-size: 28px
+                position: absolute
+                top: 40%
+                left: 50%
+                transform: translate(-50%, -50%)
+                opacity: 0
+
+.tokenomics
+    padding: 160px 0 0
+    color: #fff
+    &-accordeon
+        margin-top: 50px
+        display: flex
+        flex-wrap: wrap
+        align-items: flex-start
+        align-content: flex-start
+        justify-content: space-between
+        counter-reset: tokenomics-accordeon
+        gap: 40px
+        &__item
+            transition: .3s ease-out
+            background: url('../img/tokenomics/acc-item-bg.png')
+            width: calc((100% - 40px) / 2)
+            position: relative
+            &:hover
+                transition: .3s ease-out
+                background: #0342E7
+                summary
+                    font-size: 24px
+                    padding: 34px 20px 0 40px
+                    transition: .2s ease-in
+                    &:after
+                        color: #fff
+                        transition: color .3s ease-out
+                div
+                    transition: .3s ease-out
+                    margin-top: 10px
+                    max-height: 100%
+                p
+                    transition: .3s ease-out
+                    margin-top: 0
+                &:before, &:after
+                    border-width: 2px
+                    border-color: #fff
+                    transition: border .3s ease-out
+            &:before, &:after
+                content: ''
+                display: inline-block
+                width: 64px
+                height: 64px
+                border: 1px solid #3A3A3A
+                position: absolute
+                transition: border .3s ease-out
+            &:before
+                border-right: 0
+                border-bottom: 0
+                left: 0
+                top: 0
+            &:after
+                border-top: 0
+                border-left: 0
+                right: 0
+                bottom: 0
+            summary
+                text-transform: uppercase
+                padding: 15px 20px 15px 30px
+                color: #fff
+                position: relative
+                font-family: 'AGPB', sans-serif
+                font-size: 18px
+                line-height: 34px
+                transition: .3s ease-out
+                &:after
+                    transition: color .3s ease-out
+                    color: #616161
+                    font-family: 'AGPM', sans-serif
+                    font-size: 14px
+                    content: '0' counter(tokenomics-accordeon)
+                    counter-increment: tokenomics-accordeon
+                    position: absolute
+                    bottom: 15px
+                    right: 20px
+            div
+                transition: .3s ease-out
+                overflow: hidden
+                max-height: 0px
+                margin-top: 0
+            p
+                padding: 0 40px 33px
+                font-family: 'Barlow-Regular', sans-serif
+                font-size: 18px
+                line-height: 26px
+                margin: 0
+                transition: .3s ease-out
+                margin-top: -80px
+    &-infographics
+        margin-top: 191px
+        display: flex
+        &__item
+            padding: 22px 10px 44px
+            display: flex
+            align-items: center
+            flex-direction: column
+            max-width: 98px
+            flex-grow: 1
+            box-sizing: content-box
+            position: relative
+            text-align: center
+            min-height: 180px
+            gap: 7px
+            &:before
+                content: url('../img/tokenomics/line.svg')
+                position: absolute
+                left: 0
+                top: 0
+            &:last-child:after
+                content: url('../img/tokenomics/line.svg')
+                position: absolute
+                top: 0
+                right: 0
+            .tokenomics-item__circle
+                height: 24px
+                display: flex
+                align-items: center
+                span
+                    border-radius: 50%
+                    display: inline-block
+            &:nth-child(2n + 1)
+                animation: tokenomics-3 6s ease-in infinite alternate
+                .tokenomics-item__circle span
+                    animation: tokenomics-1 6s ease-in infinite alternate
+            &:nth-child(2n + 2)
+                animation: tokenomics-4 10s ease-in-out infinite alternate-reverse
+                .tokenomics-item__circle span
+                    animation: tokenomics-2 10s ease-in-out infinite alternate-reverse
+            b
+                font-family: 'Barlow-Medium', sans-serif
+                font-weight: 500
+                font-size: 18px
+                color: #CB24FF
+            .tokenomics-item__info 
+                display: flex
+                flex-direction: column
+                align-items: center
+                span
+                    min-height: 66px
+                    display: inline-block
+                    margin-top: 2px
+                    font-family: 'Barlow-Medium', sans-serif
+                    font-size: 16px
+                    line-height: 22px
+                
+.footer
+    padding: 160px 0 0 0
+    color: #fff
+    position: relative
+    overflow: hidden
+    .after
+        position: absolute
+        z-index: -1
+        bottom: -5px
+        right: -64px
+    &-inner
+        margin-top: 70px
+        display: flex
+        flex-direction: column
+        gap: 128px
+    &-contact
+        display: flex
+        justify-content: space-between
+        max-width: 1139px
+        align-items: flex-start
+        &__item
+            padding: 51px 0 0 61px
+            max-width: 480px
+            position: relative
+            &:before
+                content: ''
+                position: absolute
+                top: 0px
+                left: 0
+                display: inline-block
+                width: 60px
+                height: 60px
+                border: 1px solid #fff
+                border-right: 0
+                border-bottom: 0
+            h3
+                font-family: 'AGPB', sans-serif
+                font-size: 30px
+                line-height: 42px
+                margin: 0 0 17px
+                text-transform: uppercase
+                br
+                    display: none
+            p
+                font-family: 'Barlow-Light', sans-serif
+                font-size: 20px
+                line-height: 30px
+                margin: 0 0 21px
+                padding-right: 40px
+            a
+                margin-top: auto
+                display: inline-block
+                padding-left: 45px
+                color: #CB24FF
+                font-family: 'Barlow-Light', sans-serif
+                font-size: 20px
+                text-decoration: none
+                background: url('../img/menu/letter.svg') left center no-repeat
+                span
+                    line-height: 30px
+                    padding-bottom: 5px
+                    border-bottom: 1px solid rgba(203,36,255, .2)
+                    transition: .2s ease-in
+                &:hover span
+                    border-bottom: 1px solid #CB24FF
+    &-subscribe
+        display: flex
+        align-items: flex-start
+        max-width: 920px
+        justify-content: space-between
+        margin: 0 auto
+        width: 100%
+        &__linkblock
+            display: flex
+            align-items: flex-end
+            span
+                color: #616161
+                font-family: 'Barlow-Regular', sans-serif
+                font-size: 18px
+                line-height: 26px
+                max-width: 150px
+        &__link
+            width: 200px
+            height: 200px
+            border-radius: 50%
+            border: 1px solid #fff
+            overflow: hidden
+            display: flex
+            justify-content: center
+            text-decoration: none
+            text-transform: uppercase
+            flex-direction: column
+            align-items: center
+            color: #fff
+            font-family: 'AGPB', sans-serif
+            font-size: 16px
+            position: relative
+            transition: background .2s ease-in, transform .2s ease-in, border .2s ease-in
+            &:before
+                content: url('../img/contact/arrow.svg')
+                top: 48px
+                left: 10px
+                position: absolute
+            svg
+                position: absolute
+                padding: 9px
+                box-sizing: content-box
+                bottom: 25px
+                background: #fff
+                border-radius: 50%
+                path
+                    transition: fill .2s ease-in
+            &:hover
+                border-color: #0342E7
+                transform: scale(.91)
+                background: #0342E7
+                svg path
+                    fill: #0342E7
+        &__block
+            width: 440px
+            padding: 36px 40px 45px 40px
+            color: #fff
+            display: flex
+            flex-direction: column
+            background: url('../img/bg-site.png') 440px 310px, radial-gradient(60.45% 76.17% at -5.8% 40.18%, #16A9FE 0%, rgba(22, 169, 254, 0) 100%), radial-gradient(101.15% 101.15% at 50% 101.15%, #0342E7 0%, #CB24FF 53.65%)
+            margin-right: -32px
+            strong
+                font-family: 'AGPM', sans-serif
+                font-size: 32px
+                font-weight: 500
+                text-transform: uppercase
+            b
+                font-family: 'AGPM', sans-serif
+                font-size: 22px
+                font-weight: 500
+                text-transform: uppercase
+            p
+                margin: 20px 0 30px
+                font-family: 'Barlow-Regular', sans-serif
+                font-size: 20px
+                line-height: 30px
+            form
+                display: flex
+                justify-content: space-between
+            input
+                font-size: 18px
+                font-family: 'Barlow-Medium', sans-serif
+                font-weight: 500
+                color: #fff
+                background: 0
+                border: 0
+                border-bottom: 1px solid #fff
+                padding: 0 11px
+                flex-grow: 1
+                max-width: 290px
+                &::placeholder
+                    color: rgba(255, 255, 255, .4)
+                &:focus
+                    outline: none
+                    border-bottom-color: orange
+            button
+                border: 0
+                width: 50px
+                height: 50px
+                display: inline-flex
+                justify-content: center
+                align-items: center
+                transition: transform .15s linear
+                &:hover
+                    transform: scale(1.05)
+
+                
+                
+
+
+@media (max-width: 1600px)
+    :root
+        --keyPosition: translate(10vw, 100%)
+
+    .main
+        &-back__block
+            transform: scale(.8)
+            right: -330px
+        &-back__head
+            max-width: 450px
+        &-info
+            align-items: flex-start
+            &__text strong
+                font-size: 80px
+            &__text b
+                font-size: 48px
+            &__text span
+                font-size: 34px
+            &__bottom
+                gap: 40px
+    
+    .process-parent__flex
+        zoom: .9
+
+    .about-text
+        zoom: .9
+    .about-blocktext
+        zoom: .9
+    .about-circle
+        zoom: .9
+
+
+    .footer .after
+        width: 500px
+        right: -100px
+    
+    .footer-subscribe
+        padding-left: 55px
+
+@media (max-width: 1530px)
+    // .process-item__button
+    //     margin: auto 0
+
+    // .process-parent__pre
+    //     width: 30px
+
+    // .process-item__button
+    //     width: 110px
+    //     height: 110px
+
+    // .process-parent__item
+    //     margin-left: -110px
+
+    // .process-parent__grid .process-item__info
+    //     max-width: 300px
+    //     right: -22px
+    //     button
+    //         margin-left: -23px
+
+@media (max-width: 1400px)
+    :root
+        --keyPosition: translate(20%, 100%)
+        --featOffset: 140px
+
+    .main-back__block
+        zoom: .9
+    .main-back__head
+        zoom: .9
+        top: 318px
+    .main-info
+        zoom: .9
+
+    .process-parent__flex
+        zoom: .8
+
+    .features
+        zoom: .95
+        &-scroller
+            max-width: 430px
+@media (max-height: 853px)
+    .process-parent__sticky
+        padding-top: 80px
+    .process-parent__grid
+        margin-top: 60px
+
+    .header-list
+        padding: 15px 0
+        gap: 10px
+
+@media (max-height: 768px)
+    .main
+        padding-bottom: 20px
+        &-back
+            height: 700px
+        &-info__text
+            margin-bottom: 50px
+            strong
+                font-size: 63px
+            b
+                font-size: 40px
+            span
+                font-size: 28px
+                &:before
+                    width: 44px
+                    height: 44px
+                &.main-first-span:before
+                    top: -35px
+
+@media (max-width: 1300px)
+    .about-text
+        zoom: .8
+    .about-blocktext
+        zoom: .8
+    .about-circle
+        zoom: .8
+
+    .process-parent__flex
+        zoom: .7
+@media (max-width: 1226px)
+    :root
+        --keyPosition: translate(40%, 50%)
+
+    .header-content__nav a
+        font-size: 34px
+    
+    .features
+        zoom: 1
+        &-accordeon
+            flex-direction: column
+            &__item
+                max-width: 100%
+
+    .vision-sticky
+        background: url('../img/bg-site.png') no-repeat, url("../img/vision/black-hole.gif") right bottom no-repeat
+        background-size: 454px 393px
+        padding-bottom: 71px
+
+    .vision-main
+        display: block
+        &__triangle
+            position: absolute
+            right: 0
+            top: 0
+        &__center
+            vertical-align: top
+
+@media (max-width: 1130px)
+    .container
+        padding: 0 40px
+
+    .header-content
+        padding: 60px 0 0
+        &__wrapper
+            padding: 40px 40px 0
+            align-items: flex-start
+
+    .header-inner
+        height: 60px
+        width: 100%
+        flex-direction: row
+        background-color: #000
+        border-bottom: 1px solid #3A3A3A
+
+    .header-logo
+        width: 60px
+        height: 60px
+
+    .header-name
+        display: none
+
+    .header-inner__name
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: center
+        margin-left: 15px
+        width: auto
+        strong
+            font-size: 19px
+            &.active
+                color: #fff
+        span
+            font-size: 14px
+
+    .header-button
+        order: 1
+        flex-grow: 0
+        flex-direction: column
+        border: 1px solid #3A3A3A
+        border-right: 0
+        border-top: 0
+        border-bottom: 0
+        padding: 0
+        width: 120px
+        height: 60px
+        span
+            width: 40px
+            height: 2px
+        &.active span
+            height: 2px
+            width: 30px
+
+    .header-list
+        padding: 0
+        flex-direction: row
+        border: 0
+        align-items: center
+        margin: 0 40px 0 auto
+
+    .header-content
+        transform: translate(0, -150%)
+    
+    .header-contact__item
+        padding: 27px 0 0 32px
+        &:before
+            width: 32px
+            height: 32px
+        br
+            display: none
+        strong
+            font-size: 22px
+        p
+            font-size: 17px
+        a
+            font-size: 18px
+
+    .about-text
+        zoom: .7
+    .about-blocktext
+        zoom: .7
+    .about-circle
+        zoom: .7
+
+    .tokenomics
+        padding-top: 100px
+        &-inner
+            display: flex
+            justify-content: space-between
+            gap: 40px
+        &-accordeon
+            margin-top: 62px
+            flex-direction: column
+            justify-content: flex-start
+            gap: 10px
+            &__item
+                width: 100%
+                max-width: 616px
+                overflow: hidden
+                &:hover summary
+                    padding: 21px 20px 0 30px
+                summary
+                    padding: 12px 20px 12px 30px
+        &-infographics
+            max-width: 267px
+            flex-direction: column
+            flex-grow: 1
+            margin-top: -67px
+            margin-right: -40px
+            &__item
+                padding: 20px 7px 0px
+                max-width: 100%
+                animation: none !important
+                min-height: auto
+                flex-direction: row
+                text-align: left
+                &:before
+                    content: url('../img/tokenomics/line-h.svg')
+                    top: 0
+                    width: 100%
+                    overflow: hidden
+                &:last-child:after
+                    width: 100%
+                    overflow: hidden
+                    content: url('../img/tokenomics/line-h.svg')
+                    right: auto
+                    top: auto
+                    bottom: -10px
+                    left: 0
+                .tokenomics-item__circle
+                    justify-content: center
+                    width: 34px
+                .tokenomics-item__info
+                    align-items: flex-start
+                    span
+                        min-height: auto
+    .footer-inner
+        margin-top: 60px
+        gap: 60px
+
+    .footer-contact
+        max-width: 696px
+        &__item
+            padding: 36px 0 0 45px
+            max-width: 327px
+            &:before, &:after
+                width: 43px
+                height: 43px
+            h3
+                padding-right: 40px
+                font-size: 24px
+                line-height: 34px
+                margin: 0 0 15px
+                br
+                    display: block
+            p
+                font-size: 18px
+                line-height: 26px
+                margin-bottom: 14px
+                padding: 0
+
+    .footer-subscribe
+        padding-left: 45px
+        max-width: 788px
+        &__block
+            width: 420px
+            padding: 25px 30px 30px
+            strong
+                font-size: 26px
+            b
+                font-size: 18px
+            p
+                margin: 23px 0 13px
+                font-size: 18px    
+
+@media (min-width: 1025px) and (max-height: 853px)
+
+    .main-info
+        zoom: .8
+    .main-back__block
+        zoom: .8
+    .main-back__head
+        zoom: .8
+
+
+    .vision-sticky
+        padding-top: 70px
+
+    .vision-main__face
+        max-width: 450px
+
+    .vision-main__center
+        margin-top: -60px
+        --keyPosition: translate(40%, 120%)
+
+    .vision-main__text p
+        font-size: 18px
+
+    .vision-main__triangle
+        transform: scale(.9) translate(10%, -30%)
+
+@media (max-width: 1024px)
+    :root
+        --keyPosition: translate(10vw, 110%)
+        --featOffset: 0
+
+    .header-list
+        gap: 30px
+
+    .header-content__wrapper
+        min-height: 693px
+        padding-bottom: 257px
+
+    .header-content__inner
+        padding: 0
+
+    .header-content__nav a
+        padding-left: 35px
+        &:before
+            font-size: 14px
+            width: 35px
+
+    .header-contact
+        width: auto
+        max-width: 451px
+        flex-grow: 1
+        flex-direction: column
+        gap: 30px
+        &__item
+            max-width: 345px
+            strong
+                line-height: 30px
+            p
+                margin: 10px 0 5px
+                line-height: 26px
+
+    .header-subscribe__plane
+        width: 346px
+
+    .header-subscribe__block
+        padding: 25px 30px 30px
+        strong
+            font-size: 26px
+        b
+            font-size: 18px
+        p
+            font-size: 18px
+            line-height: auto
+
+    .about
+        height: 768px
+        padding: 100px 0 160px
+        hr
+            margin-bottom: 29px
+        &-text
+            zoom: 1
+            font-size: 36px
+            max-width: 616px
+        &-blocktext
+            zoom: 1
+            font-size: 20px
+            line-height: 28px
+            margin: 137px 0 0 124px
+            max-width: 284px
+            &:before, &:after
+                width: 43px
+                height: 43px
+            &:before
+                top: -38px
+        &-circle
+            zoom: 1
+            transform: scale(.75) translate(25%, -55%)
+
+    .main
+        padding-top: 184px
+        &-back
+            height: 850px
+            &__block
+                transform: translateY(-50px) scale(0.8)
+                right: -441px
+            &__head
+                max-width: 399px
+                right: -104px
+                top: 218px
+        &-info
+            align-items: flex-start
+            &__text span
+                font-size: 31px
+                &:before
+                    width: 50px
+                    height: 50px
+                    top: -40px
+                &.main-second-span
+                    margin-left: 129px
+                    &:before
+                        left: -83px
+                        top: auto !important
+                        bottom: 8px
+            &__text strong
+                font-size: 73px
+            &__text b
+                font-size: 45px
+            &__bottom p
+                font-size: 20px
+                line-height: 28px
+                max-width: 269px
+            &__bottom
+                gap: 0
+                button
+                    transform: scale(.82)
+                    &:hover
+                        transform: scale(.73)
+
+
+
+    .process-container
+        padding-right: 0
+
+    .section-title
+        font-size: 40px
+
+    .process-parent
+        height: auto
+    
+    .process-parent__sticky
+        position: static
+
+    .process-parent__flex
+        display: none
+
+    .process-parent__grid-mobile
+        display: block
+
+    .process-item__info h3
+        font-size: 20px
+
+    .process-item__info p
+        font-size: 18px
+
+    .process-parent__grid-mobile .process-item__info::before
+        width: 43px
+        height: 43px
+
+    .features-inner
+        margin-top: 50px
+
+    .features-accordeon
+        max-width: 452px
+        gap: 20px
+        &__item summary
+            font-size: 17px
+            &:after
+                font-size: 11px
+        &__item p
+            line-height: 26px
+
+    .features-scroller
+        display: flex
+        align-items: flex-end
+        max-width: 421px
+        margin-top: -101px
+        &__images
+            min-height: 611px
+            img
+                max-width: 429px
+                right: -39px
+                bottom: -32px
+                &.active
+                    transform: translateX(0)
+        &__info
+            z-index: 0
+            max-width: 100%
+            div
+                width: 100%
+                padding: 74px 30px 0
+                &:before
+                    width: 44px
+                    height: 44px
+                    border-width: 2px
+                h3
+                    font-size: 20px
+                    margin-bottom: 10px
+                p
+                    font-size: 18px
+
+    .features-slider__btns
+        display: none
+
+    .vision
+        height: auto
+        padding-top: 160px
+        &-sticky
+            padding-top: 0
+            padding-bottom: 71px
+        &-slider
+            height: calc(100% + 130px)
+            display: block
+        &-main__face
+            margin-top: -42px
+            max-width: 386px
+        &-main__center
+            position: absolute
+            right: 0
+            transform: translateX(-190px)
+        &-main__triangle
+            transform: scale(.7) translateY(-87px)
+        &-main__text h3
+            font-size: 20px
+        &-main__text p
+            margin-top: 20px
+            font-size: 18px
+            &:before, &:after
+                width: 43px
+                height: 43px
+    
+    .footer
+        padding-top: 120px
+        .after
+            max-width: 481px
+            max-height: 640px
+            right: -157px
+        &-subscribe
+            max-width: 788px
+            &__linkblock 
+                margin-top: -20px
+                span
+                    font-size: 17px
+                    line-height: 26px
+            &__link
+                transform: scale(.82) translateY(10px)
+                margin-left: -15px
+                margin-right: -10px
+                &:hover
+                    transform: scale(.72) translateY(10px)
+            &__block
+                width: 420px
+                padding: 25px 30px 30px
+                strong
+                    font-size: 26px
+                b
+                    font-size: 18px
+                p
+                    margin: 23px 0 13px
+                    font-size: 18px
+
+@media (max-width: 1000px)
+    .about-text
+        zoom: .9
+
+    .about-blocktext
+        zoom: .9
+
+    .about-circle
+        zoom: .9
+
+@media (max-width: 885px)
+    :root
+        --keyPosition: translate(5%, 150%)
+
+    .main-back
+        height: 650px
+
+    .main-back__block
+        zoom: .7
+        top: -296px
+
+    .main-back__head
+        zoom: .8
+
+    .main-info
+        zoom: .7
+
+
+    .about-text
+        zoom: .8
+    .about-blocktext
+        zoom: .8
+    .about-circle
+        zoom: .8
+
+
+    .vision-main
+        display: flex
+        &__face
+            margin-top: 0
+            margin-left: -76px
+        &__center
+            transform: translateX(-80px)
+        &__text div
+            max-width: 368px
+        &__text p
+            padding: 43px
+            &:after, &:before
+                width: 43px
+                height: 43px
+    
+    .vision-main__planet img
+        width: 242px
+
+    .features-scroller
+        max-width: 400px
+
+    .footer-subscribe__block
+        width: 364px
+        form
+            gap: 20px
+
+    .footer-subscribe__linkblock span
+        max-width: 130px
+
+
+@media ( max-width: 768px )
+    :root
+        --keyPosition: translate(-60%, 160%)
+
+    .header-content__nav
+        margin-top: 20px
+        a
+            font-size: 30px
+    
+    .header-contact
+        max-width: 345px
+        &__item:last-child:before
+            border: 0
+            border-right: 1px solid #000
+            border-top: 1px solid #000
+            left: auto
+            right: 0
+
+    .header-subscribe__block p
+        margin: 13px 0 23px
+
+
+    .about
+        padding-bottom: 162px
+        &-inner
+            padding-right: 0
+        &-text
+            zoom: 1
+        &-blocktext
+            zoom: 1
+            margin: 107px 0 0 44px
+            max-width: 235px
+        &-circle
+            zoom: 1
+            transform: scale(.65) translate(70%, -60%)
+
+
+
+    .main-back__block
+        zoom: .8
+        top: -256px
+        right: -520px
+
+    .main-back__head
+        max-width: 366px
+        top: 207px
+        right: -147px
+        zoom: 1
+    
+    .main-info
+        zoom: 1
+        &__text
+            margin-bottom: 60px
+            span
+                font-size: 27px
+                &:before
+                    top: -35px
+                    width: 44px
+                    height: 44px
+                &.main-second-span
+                    margin-left: 113px
+                    &:before
+                        bottom: 7px
+                        left: -73px
+            strong
+                font-size: 65px
+            b
+                font-size: 40px
+                letter-spacing: .005em
+        &__bottom button
+            margin-top: 20px
+                   
+
+    .process-parent__grid-mobile
+        padding-top: 109px
+        .process-slider__item
+            max-width: 508px
+            .process-item__before
+                width: 61px
+            &:not(:first-child) .process-item__before
+                width: 16px
+            .process-item__info
+                width: 361px
+            &:first-child .process-item__info
+                width: 301px
+            &:not(:first-child)
+                max-width: 508px
+        .process-item__block button
+            margin: auto 15px auto 0
+            width: 100px
+            height: 100px
+            &.button-1
+                margin-top: 7px
+            &.button-2
+                margin-bottom: 10px
+            img
+                transform: translate(-50%, -50%) scale(.79)
+
+
+    .features-inner
+        flex-direction: column
+        align-items: stretch
+        gap: 50px
+
+    .features-accordeon
+        flex-direction: row
+        max-width: 100%
+        &__item
+            max-width: 100%
+            gap: 40px 20px
+            width: calc((100% - 40px) / 2)
+            min-width: 245px
+            flex-grow: 1
+    
+    .features-scroller
+        margin-top: 0
+        max-width: 100%
+        height: 342px
+        min-height: auto
+        &__images
+            width: 100%
+            height: 100%
+            img
+                width: 354px
+                transform: translate(-150%, -62px)
+        &__info div
+            padding: 35px 30px 0 0
+            max-width: 390px
+            line-height: 28px
+                    
+
+
+    .vision
+        padding-bottom: 50px
+        &-slider
+            height: 100%
+        &-sticky
+            background-size: 404px 350px
+            padding-bottom: 307px
+        &-main
+            display: block
+            &__face
+                max-width: 224px
+            &__text
+                max-width: 100%
+                top: 0
+                div
+                    width: calc(100vw - 30px)
+                h3
+                    font-size: 18px
+                    margin-left: 32px
+                p
+                    padding: 32px
+                    font-size: 17px
+                    &:before, &:after
+                        width: 32px
+                        height: 32px
+            &__center
+                max-width: 478px
+                display: flex
+                flex-direction: column
+                align-items: flex-end
+                transform: translate(0)
+                margin-top: -90px
+                position: absolute
+                right: 0
+                width: 100%
+                min-height: 242px
+                div
+                    max-width: 100%
+                    p
+                    max-width: 100%
+            &__planet
+                width: 190px
+                position: absolute
+                top: -176px
+                right: 0
+                left: auto
+                img
+                    width: 100%
+            &__triangle
+                transform: scale(.6) translate(100px, -120px)
+
+    .footer .after
+        max-width: 483px
+        max-height: 643px
+        bottom: 223px
+        right: -141px
+
+    .footer-inner
+        flex-direction: row
+        align-items: flex-start
+        gap: 10px
+        max-width: 685px
+        justify-content: space-between
+        
+    .footer-contact
+        flex-direction: column
+        gap: 65px
+
+    .footer-subscribe
+        padding-left: 0
+        flex-direction: column
+        margin: 315px 0 0 0
+        width: auto
+        gap: 58px
+        &__linkblock span
+            max-width: 72px
+        &__block
+            width: calc(100% + 40px)
+            margin-right: -40px
+        
+
+@media (max-width: 768px) and (min-height: 1000px)
+    .about-blocktext
+        max-width: 340px
+        margin-left: 130px
+
+    .about-circle
+        top: 600px
+        right: 50%
+        transform: scale(.65) translate(70%, 0%)
+
+@media (max-width: 740px)
+    .about-text
+        zoom: .9
+    .about-blocktext
+        zoom: .9
+    .about-circle
+        zoom: .9
+
+@media ( max-width: 700px )
+    .header-inner__name
+        display: none
+
+    .main-info
+        zoom: .7
+
+    .main-back__block
+        zoom: .6
+        top: -236px
+        right: -530px
+    .main-back__head
+        zoom: .7
+        top: 247px
+
+    .about-text
+        zoom: .78
+    .about-blocktext
+        zoom: .78
+    .about-circle
+        zoom: .78
+    
+    .footer .after
+        bottom: 0
+        right: -188px
+
+    .footer-inner
+        flex-direction: column
+        gap: 78px
+        align-items: stretch
+
+    .footer-contact__item
+        max-width: 100%
+        h3 br
+            display: none
+    
+    .footer-subscribe
+        margin-top: 0
+        max-width: 100%
+        &__link
+            margin-top: -20px
+        &__linkblock
+            margin-left: 45px
+            align-items: flex-start
+            span
+                max-width: 88px
+                font-size: 16px
+        &__block
+            align-self: flex-end
+            max-width: 500px
+            width: 100%
+
+@media ( max-width: 585px )
+    .about-text
+        zoom: .7
+    .about-blocktext
+        zoom: .7
+    .about-circle
+        zoom: .7
+@media ( max-width: 520px )
+    :root
+        --keyPosition: translate(-60%, 180%)
+    
+    .container
+        padding: 0 15px
+
+    .header-list
+        flex-grow: 1
+        max-width: 220px
+        gap: 0
+        justify-content: space-between
+        margin: 0 25px
+
+    .header-content__wrapper
+        padding: 35px 15px 0
+        height: auto
+
+    .header-content__inner
+        flex-direction: column
+        align-items: stretch
+        padding: 0
+
+    .header-content__nav
+        gap: 15px
+        margin: 0 0 45px
+        a
+            font-size: 24px
+            padding-left: 25px
+            &:before
+                padding-top: 8px
+                font-size: 12px
+
+    .header-contact
+        margin-bottom: 70px
+        max-width: 100%
+        &__item
+            max-width: 100%
+
+    .header-subscribe
+        position: static
+        &__plane
+            display: none
+        &__block
+            width: 100%
+            strong
+                font-size: 24px
+            b
+                font-size: 17px
+            p
+                font-size: 17px
+                line-height: 26px
+                margin: 11px 0 18px
+
+
+    .about
+        padding-bottom: 242px
+        &-inner
+            position: static
+        hr
+            margin-bottom: 18px
+        &-text
+            font-size: 28px
+            zoom: 1
+        &-blocktext
+            margin: 46px 0 0 33px
+            max-width: 234px
+            zoom: 1
+            &:before
+                top: -26px
+            &:before, &:after
+                width: 32px
+                height: 32px
+        &-circle
+            transform: scale(.35) translate(-20%, -10%)
+            right: 0
+            top: auto
+            left: auto
+            zoom: 1
+            &:after
+                content: url('../img/about/circle.svg')
+
+
+    .process-parent__grid-mobile
+        padding-top: 59px
+        .process-slider__item
+            min-height: 530px
+        .process-item__block
+            width: 200px
+            button
+                width: 90px
+                height: 90px
+                img
+                    transform: translate(-50%, -50%) scale(.75)
+                &.button-1
+                    margin-top: 10px
+
+    .features-scroller
+        height: 590px
+        &__images img
+            max-width: 361px
+            transform: translate(150%, 188px)
+            &.active
+                transform: translate(25px, 188px)
+        &__info div
+            padding-left: 30px
+            max-width: 100%
+
+    .vision-sticky
+        padding-bottom: 345px
+
+    .vision-main__triangle
+        display: none
+
+    .tokenomics-inner
+        flex-direction: column
+    
+    .tokenomics-accordeon
+        margin-top: 36px
+        &__item summary
+            padding: 12px 20px 12px 25px
+            font-size: 18px
+            &:after
+                font-size: 13px
+        &__item p
+            font-size: 17px
+        &__item:hover summary
+            padding: 12px 20px 0 25px
+
+    .tokenomics-infographics
+        margin-top: 40px
+        margin-right: 0
+        max-width: 100%
+
+    .footer
+        padding-top: 100px
+        .after
+            max-width: 366px
+            max-height: 487px
+        &-inner
+            margin-top: 46px
+        &-contact
+            gap: 30px
+            &__item
+                padding: 28px 0 0 33px
+                &:before
+                    width: 32px
+                    height: 32px
+                &:nth-child(2n + 2):before
+                    left: auto
+                    right: 0
+                    border: 1px solid #fff
+                    border-left: 0
+                    border-bottom: 0
+                h3
+                    font-size: 22px
+                    line-height: 30px
+                    padding-right: 0
+                p
+                    font-size: 17px
+                    line-height: 26px
+        &-subscribe
+            gap: 30px
+            &__link
+                margin: -20px -30px -40px -35px
+                transform: scale(.64) translateY(-20px)
+                &:hover
+                    transform: scale(.58) translateY(-20px)
+            &__linkblock
+                margin-left: 33px        
+            &__block
+                margin-right: 0
+
+@media (max-width: 500px)
+    .main-back
+        height: 550px
+    .main-back__block
+        top: -156px
+        zoom: .45
+    .main-back__head
+        top: 297px
+        zoom: .55
+    .main-info
+        zoom: .55
+
+@media (max-width: 375px)
+    .header-button
+        width: 60px
+        padding: 0 15px
+        span
+            width: 30px
+        &.active span
+            width: 26px
+
+    .section-title
+        font-size: 30px
+
+    .main
+        padding: 353px 0 4px
+        &-back
+            height: 650px
+            &__block
+                transform: scale(0.45)
+                right: -510px
+                top: -430px
+                zoom: 1
+            &__head
+                right: -36px
+                top: 138px
+                max-width: 167px
+                zoom: 1
+        &-info
+            zoom: 1
+            &__text
+                margin-bottom: 40px
+                span
+                    font-size: 20px
+                    &:before
+                        width: 32px
+                        height: 32px
+                    &.main-first-span:before
+                        top: -26px
+                    &.main-second-span
+                        margin-left: 83px
+                        &:before
+                            left: -52px
+                            bottom: 5px
+                strong
+                    font-size: 48px
+                b
+                    font-size: 29px
+            &__bottom 
+                flex-direction: column
+                align-items: flex-start
+                width: 100%
+                p
+                    line-height: 26px
+                    font-size: 18px
+                    max-width: auto
+                    flex-grow: 1
+                button
+                    transform: scale(.64)
+                    margin: -20px 0 0 auto
+                    &:hover
+                        transform: scale(.55)
+
+    .main-back__block
+        right: -590px
+        top: -470px
+        transform: scale(.35)
+    
+    .main-info__bottom p
+        max-width: 208px
+    .main-info__bottom button
+        margin: -70px -30px -30px auto
+
+    .about
+        padding-bottom: 0
+        height: 100vh
+        &-circle
+            transform: scale(0.3) translate(-10%, -10%)
+            
+
+    .process-parent__sticky
+        padding-bottom: 0
+
+    .process-item__info h3
+        font-size: 18px
+
+    .process-item__info p
+        font-size: 17px
+
+    .process-item__before
+        width: auto !important
+
+    .process-parent__grid-mobile .process-item__info::before
+        width: 32px
+        height: 32px
+
+    .vision-slider
+        height: calc(100% + 50px)
