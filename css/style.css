@@ -981,7 +981,7 @@ body.hidd {
   top: 555px;
   left: -10px;
   margin: 0px;
-  animation: 3s loader-descripcion 1s forwards;
+  animation: 1s loader-descripcion 1s forwards;
 }
 @keyframes loader-descripcion{
   0%{
@@ -1015,7 +1015,7 @@ body.hidd {
   top: 50%;
   left: 15%;
   transform: translate(-50%, -50%);
-  animation: 3s loader-logo 1s forwards ;
+  animation: 1s loader-logo 1s forwards ;
 }
 
 @keyframes loader-logo{
@@ -1060,7 +1060,7 @@ body.hidd {
   height: 160px;
   margin: 0 auto;
   opacity: 0;
-  animation: 3s preloader_loading 1s forwards;
+  animation: 1s preloader_loading 1s forwards;
 
 }
 @keyframes preloader_loading{
